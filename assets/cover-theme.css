@@ -1,0 +1,46 @@
+/* Cover visual system. Existing journey markup and behavior are preserved. */
+:root{--ink:#102035;--muted:#75869d;--green:#00c875;--line:#e5eeef}
+body{background:radial-gradient(ellipse at 75% 20%,#d5fff0,transparent 50%),linear-gradient(135deg,#f5fafc,#e6f6f2);color:var(--ink)}
+.phone,.phone[data-stage='0']{background:radial-gradient(ellipse at 95% 24%,#d9fff280,transparent 55%),radial-gradient(ellipse at 0% 65%,#e4faffb0,transparent 52%),#f8fdfd;color:var(--ink)}
+.phone[data-stage='1']{background:radial-gradient(ellipse at 50% 45%,#c9fff0b0,transparent 65%),#f7fdfc}
+.phone[data-stage='2']{background:radial-gradient(ellipse at 50% 45%,#e6ddff9c,transparent 65%),#f9fcff}
+.phone[data-stage='3']{background:radial-gradient(ellipse at 50% 45%,#fff0cf9c,transparent 65%),#fdfdf9}
+.phone:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at -20% 62%,#ffffffed 0 15%,transparent 16%),radial-gradient(ellipse at 118% 79%,#ffffffbd 0 16%,transparent 17%);filter:blur(12px)}
+.status,header{position:relative}.status{color:#080e15}header b{color:var(--ink);font-weight:800;letter-spacing:.045em}header button{color:var(--ink)}
+h1,h2,h3,.track-title{color:var(--ink)}h1{font-size:28px;line-height:1.28;letter-spacing:-.04em;font-weight:800}.intro{color:var(--muted);font-size:14px;line-height:1.65}.section-label{color:#20334a;font-weight:650}
+.card,.input-card,.dock{background:#ffffffdf;border:1px solid #ffffff;box-shadow:0 8px 24px #28596806;backdrop-filter:blur(18px);border-radius:23px}
+.watch{background:#ffffffe8;border-radius:22px}.watch b{color:var(--ink)}.watch small{color:var(--muted)}.watch .icon{background:#e6fff4;color:#00a969;border-radius:11px;box-shadow:none}
+.state-tags .chip{background:#ffffffd9;color:#32445b;border:1px solid #ffffff;border-radius:18px;padding:11px 13px;box-shadow:none;display:flex;align-items:center;gap:8px;justify-content:center}
+.state-tags .chip:before{content:'•';display:grid;place-items:center;flex-shrink:0;width:23px;height:23px;border-radius:50%;background:#d7eaff;color:#356aab;font-size:19px}
+.state-tags .chip[data-v='有点焦躁']:before{content:'⌢';background:#a8f0d8;color:#227e67}.state-tags .chip[data-v='疲惫']:before{content:'⌢';background:#e3d8ff;color:#8262c1}.state-tags .chip[data-v='低落']:before{content:'⌢';background:#cde4ff;color:#4d82bb}.state-tags .chip[data-v='压力很大']:before{content:'⌢';background:#ffe9b8;color:#ac823d}.state-tags .chip[data-v='兴奋']:before{content:'⌣';background:#ffdcd9;color:#ad675e}
+.chip.on,.state-tags .chip.on{background:#e1fff2;border-color:#00c875;color:#143b38;box-shadow:0 3px 14px #00c87509}
+.input-card textarea,.text-input,.phone[data-page='report'] textarea{color:#22344b}.input-card button{color:#00b678}.candidate-panel,.analysis,.goal-understanding{background:linear-gradient(130deg,#e3faf3,#dbfff2);border-color:#c7efdf}.candidate-panel .chip{background:#ffffffeb;color:#263f46}
+.primary,.controls .play,.mini-player button{background:linear-gradient(115deg,#00d08a,#00bf78);box-shadow:0 7px 18px #00c87520;color:white}.primary:disabled{background:#c7ddd6;color:white;box-shadow:none}.secondary{border-color:#ceebe1;color:#00a86c;background:#ffffffc9}.footer{background:linear-gradient(transparent,#f1fcf8f2 25%,#f1fcf8)}
+.goals .goal{background:#ffffffda}.goals .goal.on{background:#e2fff3;border-color:#00c875}.goals b{color:var(--ink)}.time-presets button.on{background:#e1fff3;border-color:#00c875;color:#16423a}.reference-transition>div{background:#e9faf5;border-color:#ffffff}.reference-transition b{color:#18334b}.reference-transition>span{color:#00c875}
+.route svg path{stroke:#ccefe5;stroke-width:4}.route svg path.progress{stroke:#00d08a;filter:drop-shadow(0 2px 4px #00c87530)}.route-labels button{color:#596b83}.route-labels button.current{color:#263e52;font-weight:750}.player-title .eyebrow{color:#00a775}.player-title h2{font-size:22px;font-weight:800}.player-cloud{width:240px;height:186px;margin:15px auto 8px}.cloud-sprite{filter:drop-shadow(0 13px 16px #3ac9b51a)}.cloud.sprite-cloud:before{background:radial-gradient(ellipse,#bff9ed9c,transparent 68%)}.cloud-caption{color:#8090a5}
+.dock{border-radius:26px;box-shadow:0 9px 25px #2c65750a}.track-title{font-size:21px;font-weight:750}.dock .purpose,.timeline,.dock small{color:#7b8ca3}.controls .play{width:64px;height:64px}.controls>button:not(.play){background:#fff;border-color:#ecf1f4;color:#12213c}.dock-actions button{background:#ffffffe3;border-color:#e7f0ef;color:#102035;border-radius:99px}.player-bottom button{color:#8996a9}
+.report-hero strong{color:#00bc7b}.report-hero h2{color:var(--ink)}.report-quote{background:linear-gradient(120deg,#e3fbf1,#f3fdf9);color:#4d6c7c}.phone[data-page='report'] textarea{background:#f0f9f8;border-color:#e6f1ee}.feeling-chips .chip{background:#f4f9fa;border-color:#e8eff1;color:#718197}.feeling-chips .chip.on{background:#e2fff2;border-color:#00c875;color:#00a86e}.track{border-bottom-color:#edf2f4}.cover{background:linear-gradient(145deg,#a5dfe2,#6baab8,#c9f3ef);border-radius:11px}.track:nth-child(2n) .cover{background:linear-gradient(145deg,#c2ddfa,#f9dcdf,#bce8ef)}.song-play{background:#e3fff2;color:#00ba74}.view-all,.add,.heart.on{color:#00b775}
+dialog{background:#fafffef5!important;border-top:1px solid white;box-shadow:0 -12px 45px #153c4420}dialog::backdrop{background:#102b3d35}.sheet-choice,.feedback-options .sheet-choice{background:#ffffffd9;border-color:#e4edef;color:#20374b}.feedback-options .sheet-choice.on{background:#e2fff2;border-color:#97e4c4}.plan-block,.mini-player{background:#eafbF4}.tabs button.on{background:#00c875}.toast{background:#153847}.home-indicator{background:#111b27}
+@media(min-width:520px){.phone{border-color:#17232b;box-shadow:0 24px 70px #21475324,0 2px 8px #122d3522}}
+@media(max-height:760px){h1{font-size:26px}.player-cloud{width:185px;height:143px}.player-title h2{font-size:20px}}
+
+/* Keep modal presentation inside the phone, including its dimmed overlay. */
+.phone.sheet-open:after{content:'';position:absolute;inset:0;z-index:19;background:#102b3d35;backdrop-filter:blur(4px);pointer-events:none;border-radius:inherit}
+#sheet::backdrop{background:transparent;backdrop-filter:none}
+#sheet{box-sizing:border-box;overflow-x:hidden}
+/* Complete state faces: use supported emoji rather than partial glyphs. */
+.state-tags .chip:before{font-family:Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif;font-size:20px;width:29px;height:29px;line-height:1;overflow:visible;background:transparent!important;color:inherit}
+.state-tags .chip[data-v='有点焦躁']:before{content:'😟'}
+.state-tags .chip[data-v='疲惫']:before{content:'😴'}
+.state-tags .chip[data-v='低落']:before{content:'😔'}
+.state-tags .chip[data-v='脑子很乱']:before{content:'😵‍💫'}
+.state-tags .chip[data-v='压力很大']:before{content:'😣'}
+.state-tags .chip[data-v='提不起精神']:before{content:'😮‍💨'}
+.state-tags .chip[data-v='兴奋']:before{content:'🤩'}
+
+#sheet{overflow:hidden auto;clip-path:inset(0 round 28px 28px var(--sheet-bottom-radius,36px) var(--sheet-bottom-radius,36px));padding-bottom:max(24px,env(safe-area-inset-bottom))}
+@media(max-width:519px){#sheet{--sheet-bottom-radius:0px}}
+
+.return-intro{position:fixed;left:24px;top:20px;display:flex;align-items:center;gap:10px;padding:10px 18px;border:1px solid #d2e9df;border-radius:30px;background:#fafffdeb;color:#18362d;font-size:14px;font-weight:600;line-height:1.5;text-decoration:none;z-index:15;backdrop-filter:blur(12px)}.return-intro span:first-child{font-size:24px;line-height:1}.return-intro:hover{background:#e0f9ed}.return-intro:focus-visible{outline:3px solid #00aa75;outline-offset:4px}
+.phone[data-page="report"] .report-hero h2{font-size:21px;line-height:1.5}.phone[data-page="report"] .report-hero p{font-size:15px;line-height:1.7}.phone[data-page="report"] h3{font-size:17px;line-height:1.5}.phone[data-page="report"] .feeling-chips .chip{font-size:15px}.phone[data-page="report"] textarea{font-size:16px;line-height:1.7}.phone[data-page="report"] .report-quote{font-size:17px;line-height:1.8}.phone[data-page="report"] .reference-transition b{font-size:19px}.phone[data-page="report"] .reference-transition small{font-size:14px}.phone[data-page="report"] .record-details summary{font-size:15px}.phone[data-page="report"] .report-music small{font-size:14px}.phone[data-page="report"] .track-copy b{font-size:15px}
+@media(max-width:519px){body{padding-top:58px!important}.return-intro{left:12px;top:9px;padding:8px 13px;font-size:13px}.phone{height:calc(100dvh - 58px)!important;max-height:calc(100dvh - 58px)!important}}
