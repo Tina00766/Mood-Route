@@ -2,7 +2,16 @@
 const $=id=>document.getElementById(id),screen=$('screen'),audio=$('audio');
 const goals=[['放松一点','放下紧绷的感觉','mint'],['保持专注','更专注地投入','blue'],['找回能量','恢复一点活力','warm'],['准备入睡','轻轻收束一天','purple']];
 const names=[['接住此刻','慢慢放松','放缓思绪','轻松停留'],['接住此刻','减少干扰','进入专注','稳定停留'],['接住此刻','唤醒节奏','找回活力','能量停留'],['接住此刻','慢慢放松','放缓思绪','安静入睡']];
-const library=[['Blue Breathing','blue-breathing.mp3'],['Soft Current','clouds-passing.mp3'],['After the Rain','after-the-rain.mp3'],['Quiet Horizon','quiet-horizon.mp3'],['留白','quiet-horizon.mp3']];
+// Music library — free classical recordings (Beethoven), sourced from Wikimedia Commons.
+// Licenses: Symphony No.5 & Sonata No.28 = public-domain performances;
+// Für Elise = CC BY-SA 4.0 (perf. JMC Han); Moonlight = CC BY-SA 2.0 de; Pathétique = CC BY 4.0.
+const library=[
+  ['贝多芬 · 第五交响曲（c小调）第一乐章','beethoven-symphony5.mp3'],
+  ['贝多芬 · 致爱丽丝','beethoven-fur-elise.mp3'],
+  ['贝多芬 · 月光奏鸣曲（第一乐章）','beethoven-moonlight.mp3'],
+  ['贝多芬 · 悲怆奏鸣曲（Op.13）','beethoven-pathetique.mp3'],
+  ['贝多芬 · 第28钢琴奏鸣曲（Op.101）第一乐章','beethoven-sonata28-1.mp3']
+];
 let s={page:'now',tags:[],text:'',rating:7,endRating:7,goal:0,minutes:15,prefs:['纯音乐'],watch:false,queue:[],cur:0,seconds:0,adjustments:0,feedback:'',hold:false,checked:[],name:'',thought:'',feeling:'',saved:null,fav:null,filter:-1,undo:null};let seq=0,loaded=null,lastTick=0,timer,loadingTimer;
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Math.floor((n||0)/60)+':'+String(Math.floor((n||0)%60)).padStart(2,'0');
